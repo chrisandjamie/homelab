@@ -4,7 +4,7 @@ services:
     image: QuantumEntangledAndy/neolink
     container_name: neolink
     ports:
-      - 8554:8554
+      - 48554:8554
     volumes:
-      - $PWD/neolink.toml:/etc/neolink.toml
+      - /mnt/HDDs/App_configs/neolink/neolink.toml:/etc/neolink.toml
     restart: unless-stopped
