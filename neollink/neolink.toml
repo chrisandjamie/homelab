@@ -1,0 +1,16 @@
+[mqtt]
+broker_addr = "${{ mqtt_ip_address }}" #Address of the mqtt server
+port = 1883 #mqtt port
+credentials = ["${{ mqtt_user }}","${{ secrets.mqttpass }}"]
+
+[[cameras]]
+name = "reolink_1"
+username = "${{ camera_username }}"
+password = "${{ camera_password }}"
+address = "${{ camera_ip_address }}:9000"
+debug = false
+enabled = true
+print_format = "None"
+push_notifications = false
+[cameras.pause]
+  on_client = true # Should pause when no rtsp client
